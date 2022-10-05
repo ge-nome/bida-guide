@@ -1,0 +1,97 @@
+[{
+    "id":1,
+    "name":"Computer Science Department",
+    "slug":"computer science department",
+    "school":"5",
+    "code":"3543",
+    "lat":"9.6592186087195",
+    "long":"6.8887287517613",
+    "img1":"https://github.com/ge-nome/imagerepo/blob/main/csd1.jpg?raw=true",
+    "img2":"https://github.com/ge-nome/imagerepo/blob/main/csd2.jpg?raw=true",
+    "img3":"https://github.com/ge-nome/imagerepo/blob/main/csd3.jpg?raw=true"
+},
+{
+    "id":2,
+    "name":"Admin Block",
+    "slug":"admin block",
+    "school":"4",
+    "code":"3513",
+    "lat":"9.040153340484311",
+    "long":"6.0065387359642575",
+    "img1":"https://github.com/ge-nome/imagerepo/blob/main/Admin.jpg?raw=true",
+    "img2":"https://github.com/ge-nome/imagerepo/blob/main/Admin2.jpg.jpg?raw=true",
+    "img3":"https://github.com/ge-nome/imagerepo/blob/main/Admin.jpg.jpg?raw=true"
+},
+{
+    "id":3,
+    "name":"Civil Engineering Department",
+    "slug":"civil engineering",
+    "school":"5",
+    "code":"3533",
+    "lat":"9.037352194254996",
+    "long":"6.008943841710603",
+    "img1":"https://github.com/ge-nome/imagerepo/blob/main/civil.jpg?raw=true",
+    "img2":"",
+    "img3":""
+},
+{
+    "id":4,
+    "name":"Big Gate",
+    "slug":"big gate",
+    "school":"4",
+    "code":"3593",
+    "lat":"9.04002186087195",
+    "long":"6.0067287517613",
+    "img1":"https://github.com/ge-nome/imagerepo/blob/main/biggate.jpg?raw=true",
+    "img2":"",
+    "img3":""
+},
+{
+    "id":5,
+    "name":"Dr Omozokpia's house",
+    "slug":"dr mozokpia's house",
+    "school":"5",
+    "code":"3663",
+    "lat":"9.0636288",
+    "long":"7.4612736",
+    "img1":"https://github.com/ge-nome/imagerepo/blob/main/nc.JPG?raw=true",
+    "img2":"",
+    "img3":""
+},
+{
+    "id":6,
+    "name":"SAAS Complex",
+    "slug":"saas complex",
+    "school":"3",
+    "code":"6342",
+    "lat":"9.06936288",
+    "long":"7.4612736",
+    "img1":"https://github.com/ge-nome/imagerepo/blob/main/saas.jpg?raw=true",
+    "img2":"https://github.com/ge-nome/imagerepo/blob/main/saas1.jpg?raw=true",
+    "img3":""
+},
+{
+    "id":7,
+    "name":"Small Gate",
+    "slug":"small gate",
+    "school":"5",
+    "code":"6672",
+    "lat":"6.537216",
+    "long":"3.3718272",
+    "img1":"https://github.com/ge-nome/imagerepo/blob/main/smallgate.JPG?raw=true",
+    "img2":"",
+    "img3":""
+},
+{
+    "id":8,
+    "name":"Entrepreneurship Building",
+    "slug":"entrepreneurship building",
+    "school":"5",
+    "code":"6647",
+    "lat":"6.537216",
+    "long":"3.3718272",
+    "img1":"https://github.com/ge-nome/imagerepo/blob/main/eed.JPG?raw=true",
+    "img2":"",
+    "img3":""
+}
+]

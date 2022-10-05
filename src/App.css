@@ -1,0 +1,455 @@
+*{
+  margin: 0;
+  padding: 0%;
+  font-family: Inter;
+  text-decoration: none;
+  color: black;
+}
+body{
+  width: 100%;
+}
+.container{
+  width: 100%;
+}
+.maps{
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 700;
+  width: 100%;
+  height: 500px;
+  margin-top: -2px;
+  margin-left: -2px;
+  background-color: #5b1a5e;
+}
+.item .img{
+  width: 101%;
+  height: 300px;
+  object-fit: cover;
+  background: #000;
+}
+.topbar{
+  position: relative;
+  z-index: 1000;
+  margin: 20px 20px;
+  background-color: rgba(255, 179, 179, 0.479);
+  padding: 3px;
+  display: grid;
+  grid-template-columns: 50px auto;
+  border-radius: 10px;
+  border: 1px solid whitesmoke;
+}
+
+.main{
+  position: relative;
+  z-index: 1000;
+  margin-top: 50px;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  min-height:350px;
+}
+.location{
+  display: grid;
+  grid-template-columns: 50px auto;
+ 
+}
+.location .icon{
+  font-size: 2.5em;
+}
+.hr{
+  border-bottom: 1px solid rgb(231, 231, 231);
+  width: 90%;
+  margin: 20px auto;
+}
+.suggestions{
+  display: grid;
+  grid-template-columns: repeat(2, 45%);
+  gap: 20px;
+  justify-content: center;
+}
+.box, .card{
+  width: 100%;
+  height: 170px;
+  box-shadow: 0px 0px 10px 0px rgba(197, 197, 197, 0.3);
+  border-radius: 5px;
+}
+.card{
+  margin-bottom: 20px;
+}
+.cards{
+  box-shadow: 0px 0px 7px 0px rgba(197, 197, 197, 0.3);
+  font-size: .95em;
+  margin: 20px 0;
+}
+.cards p{
+  padding: 15px 15px;
+  /* color: red; */
+}
+
+/* .cards p{
+  font-size: .55em;
+  margin: 20px;
+} */
+.bike, .walk{
+  text-align: center;
+}
+.bike p, .walk p{
+  font-size: .4em !important;
+}
+.card3{
+  width: 100%;
+  min-height: 100px;
+  box-shadow: 0px 0px 10px 0px rgba(197, 197, 197, 0.3);
+  border-radius: 10px;
+  margin-bottom: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  justify-content: space-around;
+  align-items: center;
+  font-size: 1.8em;
+}
+.img{
+  width: 100%;
+  height: 100px;
+}
+.img img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px 5px 0 0;
+}
+.title{
+  margin: 5px 5px;
+  font-size: .6em;
+}
+.box .title{
+  margin: 10px 10px;
+  font-size: .9em;
+}
+.main2{
+  position: relative;
+  z-index: 1000;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  min-height: 400px;
+}
+.main3, .main4{
+  position: relative;
+  z-index: 1000;
+  margin-top: 400px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  padding: 20px;
+  min-height: 400px;
+}
+.main3 .route .location, .main3 .route .destination, .main4 .route .location, .main4 .route .destination{
+  padding: 10px;
+  background-color: rgba(244, 244, 244, .3);
+  margin-bottom: 5px;
+  border-radius: 5px;
+}
+.route{
+  width: 100%;
+  /* background-color: #000; */
+}
+.routes{
+  width: 100%;
+  display: grid;
+  grid-template-columns: 100px auto;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #bdbdbd;
+}
+.det{
+  background-color: rgba(244, 244, 244, .1);
+  padding: 10px;
+  border-radius: 5px;
+  
+}
+.book button{
+  position: fixed;
+  z-index: 1100;
+  width: 100%;
+  bottom: 0;
+  left: 9;
+  height: 50px;
+  border: none;
+  background-color: rgb(9, 154, 250);
+  color: white;
+}
+.float{
+  position: fixed;
+  z-index: 1200;
+  font-size: 1.5em;
+  bottom: 0;
+  right: 0;
+  width: 60px;
+  height: 60px;
+  background-color: rgb(63, 196, 165);
+  margin-bottom: 60px;
+  margin-right: 20px;
+  border: none;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  box-shadow: 10px 10px 10px rgba(244, 244, 244, .1);
+}
+.accept button{
+  position: fixed;
+  z-index: 1100;
+  width: 100%;
+  bottom: 0;
+  left: 9;
+  height: 50px;
+  border: none;
+  background-color: rgba(49, 174, 97, 0.888);
+  color: white;
+}
+.pending button{
+  position: fixed;
+  z-index: 1100;
+  width: 100%;
+  bottom: 0;
+  left: 9;
+  height: 50px;
+  border: none;
+  background-color: rgba(255, 162, 0, 0.888);
+  color: white;
+}
+.sugg{
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  justify-content: start;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.ride h2{
+  margin-bottom: 20px;
+}
+.sug-img{
+  width: 100px;
+  height: 100px;
+  /* border: 1px solid rgb(220, 220, 220); */
+  border-radius: 10px;
+}
+.sug-img img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+input{
+  /* width: 40%; */
+  padding: 10px;
+  border: 1px solid rgb(220, 220, 220);
+  border-radius: 5px;
+  box-sizing: border-box;
+  
+}
+select{
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #fff;
+  border-radius: 5px;
+  border: 1px solid rgb(220, 220, 220);
+}
+
+.routes .sug-img{
+  width: 70px;
+  height: 70px;
+}
+.details{
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  justify-content: space-evenly;
+  margin-bottom: 20px;
+  /* border: 1px solid rgb(235, 235, 235); */
+  background-color: rgba(227, 227, 227, .1);
+  padding: 10px;
+  border-radius: 5px;
+}
+.details p{
+  font-size: 1.9em;
+  text-align: center;
+  font-weight: 700;
+}
+.main2 h1{
+  font-size: 1.8em;
+  margin-bottom: 20px;
+}
+.loc, .destina{
+  display: grid;
+  grid-template-columns: 20px auto;
+}
+
+.loc p, .destina p, .stat span{
+  padding: 1px;
+  font-size: .7em;
+  border-radius: 5px;
+}
+.stat{
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  justify-content: space-between;
+  font-size: .85em;
+}
+.loc, .destina{
+  padding: 1px;
+}
+.price{
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  gap: 5px;
+}
+.contain{
+  width: 100%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(1,100%);
+  background-color: black;
+  justify-content: center;
+  align-items: center;
+}
+/* .form input{
+  width: 90%;
+} */
+.children{
+  /* position: relative; */
+  display: grid;
+  align-self: center;
+  /* z-index: 1000; */
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 50px;
+  margin: 120px auto;
+   /* background-color: red; */
+}
+.mid img{
+  justify-self: center;
+}
+.mid{
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto;
+  justify-content: center;
+  align-items: center;
+}
+.mid input{
+  width: 100%;
+  justify-self: center;
+  margin-bottom: 10px;
+  padding: 15px;
+}
+.mid button{
+  width: 100%;
+  padding: 15px;
+  font-size: 1em;
+  font-weight: 700;
+  background-color: #3b97e6;
+  color: white;
+  border-radius: 5px;
+  border: none ;
+}
+.link{
+  /* background-color: red; */
+  display: grid;
+  padding: 15px;
+  justify-content: center;
+  color: #3b97e6;
+
+}
+.info{
+  text-align: center;
+  align-self: center;
+}
+.pop{
+  display: grid;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1200;
+  background-color: rgba(0, 0, 0, 0.295);
+  height: 100%;
+}
+.pc{
+  width: 90%;
+  height: 500px;
+  margin: 20px auto;
+  justify-self: center;
+  background-color: #fff;
+  box-shadow: 0 0 10px 0 gray;
+  border-radius: 5px;
+  overflow: scroll;
+  position: relative;
+}
+.pc2{
+  width: 90%;
+  display: grid;
+  height: 100px;
+  margin: 40px auto;
+  justify-self: center;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  box-shadow: 0 0 10px 0 gray;
+  border-radius: 5px;
+  overflow: scroll;
+  font-size: 1.2em;
+  position: relative;
+}
+.popbox{
+  margin: 30px 15px;
+  cursor: pointer;
+}
+.popbox .title{
+  font-size: .9em;
+}
+.head{
+  position: relative;
+  z-index: 1005;
+  margin: 20px 20px;
+  display: grid;
+  grid-template-columns: 90px auto;
+}
+.name{
+  color: white;
+  font-size: 1.2em;
+  align-self: center;
+  font-weight: 600;
+}
+.head .logo{
+  width:70px;
+  height:70px;
+}
+.logo img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.pc h3{
+  margin: 20px 20px;
+}
+.fltbutton{
+  position: fixed;
+  z-index: 1200;
+  bottom: 0;
+  right: 0;
+  display:grid;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-right: 15px;
+  margin-bottom: 20px;
+  background-color: #5b1a5e;
+  box-shadow: 2px 3px 10px rgba(102, 102, 102, 0.589);
+  font-size: 1.2em;
+}
+.fltbutton svg path { color: white; }

@@ -1,0 +1,159 @@
+[{
+    "id":1,
+    "from":"6672",
+    "to":"38",
+    "directions":[
+        {
+            "id":"1",
+            "step":"Move for one kilometer(1km)",
+            "image":"logo.jpg"
+        },
+        {
+            "id":"2",
+            "step":"Take the sharp bend by the right close to boy's hostel/EED department",
+            "image":"logo.jpg"
+        },
+            {
+                "id":"3",
+                "step":"Move straight for 35 metres and then turn right",
+                "image":"logo.jpg"
+            },
+            {
+                "id":"4",
+                "step":"The roads passing inbetween computer science and admin",
+                "image":"logo.jpg"
+            },
+            {
+                "id":"5",
+                "step":"Move for 10 meters and turn right and keep moving",
+                "image":"logo.jpg"
+            },
+            {
+                "id":"6",
+                "step":"You will see a building that looks the same as the one on the slides",
+                "image":"logo.jpg"
+            }
+            
+        ]
+    },
+    {
+        "id":2,
+        "from":"6672",
+        "to":"34",
+        "directions":[
+            {
+                "id":"1",
+                "step":"Move for an estimate 1km",
+                "image":"logo.jpg"
+            },
+            {
+                "id":"2",
+                "step":"At the sharp turn to the right, look in the direction opposite the sharp turn",
+                "image":"logo.jpg"
+            },
+            {
+                "id":"3",
+                "step":"You will see the building shown in the slides above",
+                "image":"logo.jpg"
+            }
+        ]
+    },
+    {
+        "id":3,
+        "from":"6672",
+        "to":"32",
+        "directions":[
+            {
+                "id":"1",
+                "step":"Move for one kilometer(1km)",
+                "image":"logo.jpg"
+            },
+            {
+                "id":"2",
+                "step":"Take the sharp bend by the right close to boy's hostel/EED department",
+                "image":"logo.jpg"
+            },
+                {
+                    "id":"3",
+                    "step":"Move straight for 35 metres and then turn right",
+                    "image":"logo.jpg"
+                },
+                {
+                    "id":"4",
+                    "step":"Move for a few seconds and on you will see a building on your left opposite the admin block",
+                    "image":"logo.jpg"
+                },
+                {
+                    "id":"5",
+                    "step":"Move for a few seconds and on you will see a building on your left opposite the admin block",
+                    "image":"logo.jpg"
+                }
+        ]
+    },
+    {
+        "id":4,
+        "from":"3593",
+        "to":"34",
+        "directions":[
+            {
+                "id":"1",
+                "step":"Move for 45meters until you see a roundabout",
+                "image":"logo.jpg"
+            },
+            {
+                "id":"2",
+                "step":"After the roundabout keep moving straight for about 25 to 30 meters until you see a U -Turn.",
+                "image":"logo.jpg"
+            },
+            {
+                "id":"3",
+                "step":"Take the sharp bend by the right and move for 20 - 25 metres.",
+                "image":"logo.jpg"
+            },
+            {
+                "id":"4",
+                "step":"Turn left and keep moving.",
+                "image":"logo.jpg"
+            },
+            {
+                "id":"5",
+                "step":"Take the first right turn passing inbetween Admin Block and Computer Science Department.",
+                "image":"logo.jpg"
+            },
+            {
+                "id":"6",
+                "step":"Move for 10metres and then turn right and keep moving until you see a building that is the same as the ones on the slode above",
+                "image":"logo.jpg"
+            }
+        ]
+    },
+    {
+        "id":5,
+        "from":"3593",
+        "to":"21",
+        "directions":[
+            {
+                "id":"1",
+                "step":"Move for 45meters until you see a roundabout",
+                "image":"logo.jpg"
+            },
+            {
+                "id":"2",
+                "step":"After the roundabout keep moving straight for about 25 to 30 meters until you see a U -Turn.",
+                "image":"logo.jpg"
+            },
+            {
+                "id":"3",
+                "step":"Take the sharp bend by the right and move for 20 - 25 metres.",
+                "image":"logo.jpg"
+            },
+            {
+                "id":"4",
+                "step":"Turn left and keep moving for 1 kilometer until you see a building like the ones on the slide above.",
+                "image":"logo.jpg"
+            }
+            
+
+        ]
+    }
+]

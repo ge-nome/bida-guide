@@ -1,0 +1,24 @@
+[
+{
+    "id":1,
+    "name":"Big Gate",
+    "slug":"big gate",
+    "code":"3593",
+    "lat":"9.04002186087195",
+    "long":"6.0067287517613",
+    "img1":"https://github.com/ge-nome/imagerepo/blob/main/biggate.jpg?raw=true",
+    "img2":"",
+    "img3":""
+},
+{
+    "id":2,
+    "name":"Small Gate",
+    "slug":"small gate",
+    "code":"6672",
+    "lat":"6.537216",
+    "long":"3.3718272",
+    "img1":"https://github.com/ge-nome/imagerepo/blob/main/smallgate.JPG?raw=true",
+    "img2":"",
+    "img3":""
+}
+]

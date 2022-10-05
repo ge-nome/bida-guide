@@ -1,0 +1,225 @@
+import { useState, useEffect } from 'react'
+import { Link, useNavigate, useParams } from 'react-router-dom'
+import { useGeoLocation } from 'use-geo-location';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faLocationDot } from '@fortawesome/free-solid-svg-icons'
+import { faSearch } from '@fortawesome/free-solid-svg-icons'
+import { faIgloo } from '@fortawesome/free-solid-svg-icons'
+import logo from '../fpb.jpeg'
+const Book= ()=>{
+    const nav = useNavigate()
+    const {id, name} = useParams()
+    const {latitude, longitude} = useGeoLocation();
+    const [showsr, setshowsr] = useState(0)
+    const [cap, setcap] = useState('Departments in '+ name)
+    const [origin, setorigin] = useState([])
+    const [origins, setorigins] = useState([])
+    const [switches, setswitches] = useState(0)
+    const [myorigin, setmyorigin] = useState('')
+    const [pops, setpops] = useState(0)
+    const [error, seterror] = useState(0)
+    const [searchparam, setsearchparam] = useState('')
+    const [searchres, setsearchres] = useState([])
+    const getloc = (origin) => {
+        for(const parameter of origin){
+            if(latitude + 0.005500000000000 > parseFloat(parameter.lat) && parseFloat(parameter.lat) > latitude - 0.005500000000000 )
+                {
+                setswitches(1)
+                    setmyorigin({name:parameter.name, lcode:parameter.code})
+                    break
+            }
+            else{
+                setswitches(2)
+            }
+        }
+    }
+
+    const getsearch = (e) => {
+        setsearchparam(e.target.value)
+        const item = origin.filter(items => items.slug.indexOf(e.target.value) !== -1);
+        setsearchres(item)
+    }
+    const getorigin = async () => {
+        var axios = require('axios');
+        var config = {
+        method: 'get',
+        url: '../../orijin.json',
+        headers: { }
+        };
+
+        axios(config)
+        .then(function (response) {
+            setorigin(response.data)
+            getloc(response.data)
+        })
+        .catch(function (error) {
+        console.log(error)
+        });
+    }
+    //I removed the use effect dependency 1 Oct 2022
+    useEffect(()=>{
+        getorigin()
+    },[])
+    const getdestination = async () => {
+        var axios = require('axios');
+        var config = {
+        method: 'get',
+        url: '../../destinations.json',
+        headers: { }
+        };
+
+        axios(config)
+        .then(function (response) {
+            const item = response.data.filter(items => items.school.indexOf(id) !== -1);
+            setorigins(item)
+        })
+        .catch(function (error) {
+        console.log(error)
+        });
+    }
+    //I removed the use effect dependency 1 Oct 2022
+    useEffect(()=>{
+        getdestination()
+    },[])
+    return(
+        <div>
+            <div className="container">
+                <div className=''>
+                    <div className='head'>
+                        <div className='logo'>
+                            <img src={logo} alt=''/>
+                        </div>
+                        <div className='name'>GIRS Federal Polytechnic Bida</div>
+                    </div>
+                </div>
+                <div className="topbar">
+                    <div className="icon" style={{alignSelf:'center', justifySelf:'center'}}>
+                       {showsr === 1 ? <FontAwesomeIcon icon={faIgloo} onClick={(e)=>{setshowsr(0); setcap('Departments in '+ name)}} style={{cursor:'pointer'}} /> : <FontAwesomeIcon icon={faSearch} onClick={(e)=>setshowsr(0)}/>} 
+                    </div>
+                    <div className="topic">
+                        <input type='text' placeholder='Search for a destination' style={{width:'100%', border:'none', fontSize:'1em'}}  onFocus={(e)=>{setshowsr(1); setcap('Search Results')}}  onChange={getsearch}/>
+                    </div>
+                </div>
+                
+                <div className="maps">{
+                // <Iframe url="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3940.2701222973815!2d6.006135037105107!3d9.039105923753237!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x104966b7f2e9b195%3A0x18c8eec7a2fae37c!2sFederal%20Polytechnic%20Bida!5e0!3m2!1sen!2sng!4v1662107023865!5m2!1sen!2sng" width="500" height="800" style={{border:'0'}} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></Iframe>}
+                } 
+                 </div>
+               
+                <div className="main">
+                    <div className="route">
+                        <div className="location">
+                            {switches === 0 ? <div className="icon"><FontAwesomeIcon icon={faLocationDot}/></div> : <div className="icon" style={{cursor:'pointer'}} onClick={(e)=>setpops(1)}><FontAwesomeIcon icon={faLocationDot}/></div>}
+                            <div className='myloc' style={{display:'grid', alignItems:'center'}}>
+                                <h3>Your current Location</h3>
+                                <span>{switches === 0 ? 'Searching for location' : switches === 1 ? 'Near '+ myorigin.name : switches === 2 ? 'We could not find your current location. Tap the location icon to choose a point of origin':''}</span>
+                                <p></p>
+                                {
+                                    // <span>{latitude}</span>
+                                    // <span>{longitude}</span>
+                                }
+                            </div>
+                        </div>
+                        <div className='hr'></div>
+                    </div>
+                    <h2 style={{margin:'20px 0'}}>{cap}</h2>
+                    { showsr === 1 ? 
+                        <div className='sresults'>
+                            {
+                                switches === 1 ?
+                                searchres.map(({id, name, code, img1, img2}, i)=>(
+                                <Link to={'/directions/'+ myorigin.lcode +'/'+code} key={id}>
+                                    <div className='card'>
+                                        <div className='img'>
+                                            <img src={img1} alt='' />
+                                        </div>
+                                        <div className='title'>
+                                            <span>{name}</span>
+                                        </div>
+                                    </div>
+                                    </Link>
+                                ))
+                                :
+                                searchres.map(({id, name, code, img1, img2}, i)=>(
+                                    <div className='card' key={id}>
+                                        <div className='img'>
+                                            <img src={img1} alt='' />
+                                        </div>
+                                        <div className='title'>
+                                            <span>{name}</span>
+                                        </div>
+                                    </div>
+                                ))
+                        
+                        }
+                        </div> : 
+                        <div className='suggestions'>
+                            {
+                                switches === 1 ?
+                                    origins.map(({id, name, code, img1, img2}, i)=>(
+                                    <Link to={'/directions/'+ myorigin.lcode +'/'+code} key={id}>
+                                        <div className='box' >
+                                            <div className='img'>
+                                                <img src={img1} alt='' />
+                                            </div>
+                                            <div className='title'>
+                                                <span>{name}</span>
+                                            </div>
+                                        </div>
+                                    </Link>
+                                    
+                            )) : 
+                            origins.map(({id, name, code, img1, img2}, i)=>(
+                                    <div className='box' onClick={(e)=>seterror(1)} key={id}>
+                                        <div className='img'>
+                                            <img src={img1} alt='' />
+                                        </div>
+                                        <div className='title'>
+                                            <span>{name}</span>
+                                        </div>
+                                    </div>
+                                
+                        ))
+                        }
+                            
+                        </div>
+                    }
+                    {pops === 1 ?
+                        <div className='pop' onClick={(e)=>setpops(0)}>
+                        
+                            <div className='pc'>
+                            <h3>Select where to start</h3>
+                                {origin.map(({name, code, img2}, i)=>(
+                                    <div className='popbox' onClick={(e)=>{setmyorigin({name:name, lcode:code}); setswitches(1)}}>
+                                        <div className='title'>
+                                            <span>{name}</span>
+                                        </div>
+                                        <div className='hr'></div>
+                                    </div>
+                                ))}
+                                
+                            </div>
+                        
+                        
+                    </div>
+                    : ''
+                    }
+                    {error === 1 ?
+                        <div className='pop' onClick={(e)=>seterror(0)}>
+                            <div className='pc2'>
+                                <p>Where would you like to start?</p>
+                            </div>
+                        
+                        
+                    </div>
+                    : ''
+                    }
+                    <div className='fltbutton'>
+                        <Link to={"/"}><FontAwesomeIcon icon={faIgloo} color="white"/></Link>
+                    </div>
+                </div> 
+            </div> 
+        </div>
+    )
+}
+export default Book

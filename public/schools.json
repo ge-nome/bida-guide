@@ -1,0 +1,50 @@
+[
+{
+    "id":1,
+    "name":"School of Applied and Natural Sciences",
+    "slug":"School of Applied and Natural Sciences school of applied and natural sciences",
+    "code":"1",
+    "abbrev":"SANS",
+    "img1":"https://github.com/ge-nome/imagerepo/blob/main/csd1.jpg?raw=true"
+},
+{
+    "id":2,
+    "name":"School of Business Administration and Management",
+    "slug":"School of Environmental Studies school of environmental studies",
+    "code":"2",
+    "abbrev":"SBAM",
+    "img1":"https://github.com/ge-nome/imagerepo/blob/main/Admin.jpg?raw=true"
+},
+{
+    "id":3,
+    "name":"School of Engineering Technology",
+    "slug":"School of Engineering Technology school of engineering technology",
+    "code":"3",
+    "abbrev":"SET",
+    "img1":"https://github.com/ge-nome/imagerepo/blob/main/civil.jpg?raw=true"
+},
+{
+    "id":4,
+    "name":"School of Environmental Studies",
+    "slug":"School of Environmental Studies school of environmental studies",
+    "code":"4",
+    "abbrev":"SES",
+    "img1":"https://github.com/ge-nome/imagerepo/blob/main/biggate.jpg?raw=true"
+},
+{
+    "id":5,
+    "name":"School of Information and Communication Technology",
+    "slug":"School of Information and Communication Technology school of information and communication technology",
+    "code":"5",
+    "abbrev":"SICT",
+    "img1":"https://github.com/ge-nome/imagerepo/blob/main/nc.JPG?raw=true"
+},
+{
+    "id":6,
+    "name":"School of Financial Studies",
+    "slug":"School of Financial Studies school of agriculture",
+    "code":"6",
+    "abbrev":"SAgric",
+    "img1":"https://github.com/ge-nome/imagerepo/blob/main/saas.jpg?raw=true"
+}
+]
